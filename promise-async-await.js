@@ -1,4 +1,4 @@
-// Promise, async and await - the solution for waiting asynchronous operations as using traditional functions.
+// Promise, async and await - the solution for waiting asynchronous operations as the traditional way.
 // Author : Robert Tang
 // Date   : 5/6/2017
 
