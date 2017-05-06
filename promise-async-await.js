@@ -53,7 +53,7 @@ function httpGet(url){
 async function asyncAjaxGet(){
   try {
     let url = "http://www.google.com1";
-    var ret = await httpGet(url)
+    var ret = await httpGet(url) // Wait the GET request get done
     console.log(ret.status);
 
     if (ret.status==200) {
