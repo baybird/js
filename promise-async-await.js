@@ -49,10 +49,10 @@ function httpGet(url){
 
 }// func
 
+let url = "http://www.google.com";
 
 async function asyncAjaxGet(){
   try {
-    let url = "http://www.google.com1";
     var ret = await httpGet(url) // Wait the GET request get done
     console.log(ret.status);
 
@@ -68,3 +68,11 @@ async function asyncAjaxGet(){
 };
 
 asyncAjaxGet();
+
+// Above same as:
+httpGet(url).then((rep)=>{
+  console.log(rep.status);
+  console.log("done.");
+}).catch((err)=>{
+  console.log(err)
+});
