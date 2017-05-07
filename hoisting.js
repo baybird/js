@@ -3,7 +3,6 @@
 // Scope
 //  Scope is the part of the program that has access to the variables, objects and functions.
 //  Scope refers to the visibility of variables, objects and functions.
-//  JavaScript has local and global scopes.
 //
 // Hoisting
 //  The ability to use variables before they are declared. Local variables used without declaration
