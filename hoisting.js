@@ -18,7 +18,7 @@
 
 
 // "use strict"
-// The directive "use strict" will enable strict mode which prohibits hoisting, delete variables, etc.
+// The "use strict" directive will enable strict mode that to prohibits hoisting, delete variables, etc.
 
 function foo(){
   function bar(){
