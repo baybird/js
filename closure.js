@@ -5,10 +5,11 @@
 //   "re-created" every time a function is called.
 //
 // Purpose
-//    Closure can be used to access internal variables of a function and to keep the value of
-// those internal variables remain in memory.
+//    Closure can be used to access internal variables of a function that the variables re-created
+// every time the function is called and to keep the value of those internal variables remain in memory.
 //
 // Attention
+//
 // 1) Because closure will keep the variables in memory, so do not use the closure unnecessarily,
 //    otherwise it will negatively affect the performance both in processing speed and memory
 //    consumption. The solution is to delete all local variables that are not used before exiting
@@ -29,7 +30,11 @@ var localVariable = 1;
 
 function wrapValue(){
   localVariable++;
-  return function(){ return localVariable; }
+  return function(){
+    // Chain scope
+    // Access parent's local variables as global variables
+    return localVariable;
+  }
 }
 
 var obj = {
@@ -37,11 +42,10 @@ var obj = {
   wrap2: wrapValue() // variable re-created
 };
 
-// wrap1 = undefined;
-//
 
 console.log("wrap1:" + obj.wrap1())
 console.log("wrap2:" + obj.wrap2())
 
+console.log(obj)
 delete obj.wrap1;
 console.log(obj)
