@@ -59,6 +59,24 @@ get(url).then(
 	console.error(error)
 })
 
+// Race Promise
+var p1 = new Promise(function(resolve, reject) {
+		setTimeout(resolve, 200, 'p1');
+});
+var p2 = new Promise(function(resolve, reject) {
+		setTimeout(resolve, 100, 'p2');
+});
+
+Promise.race([p1, p2]).then(function(value) {
+	console.log(value + " is faster"); // Both are resolved, but p2 is faster
+});
+
+Promise.all([p1, p2]).then((arr)=>{
+	console.log(arr) // Both are resolved
+})
+
+
+
 // ES7
 // function resolveAfter2Seconds(x) {
 //   return new Promise(resolve => {
