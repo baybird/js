@@ -3,7 +3,7 @@
 // Date   : 5/6/2017
 
 function httpGet(url){
-    
+
     return new Promise((resolve, reject)=>{
       // Load XMLHttpRequest module
       // XMLHttpRequest provides an easy way to retrieve data from a URL without having to do a full page refresh.

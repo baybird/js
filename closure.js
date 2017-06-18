@@ -3,6 +3,7 @@
 // * Functions that "closes" local variables.
 // * The ability to treat functions as values, combined with the fact that local variables are
 //   "re-created" every time a function is called.
+// * The ability to use function as class.
 //
 // Purpose
 //    Closure can be used to access internal variables of a function that the variables re-created
